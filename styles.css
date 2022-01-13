@@ -1,0 +1,16 @@
+/* GLOBAL RULES */
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-image: url("./assets/solar-system-background_23-2147939182.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
