@@ -1,0 +1,82 @@
+/* GLOBAL RULES */
+
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-image: url("./assets/solar-system-background_23-2147939182.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0px;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+
+
+
+/* MAIN PAGE RULES */
+
+
+.main-page {
+  display: flex;
+  height: 100vh;
+  color: #FFFFFF;
+
+}
+
+.player-one-area,
+.player-two-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 26vw;
+  margin-top: 21vh;
+
+}
+
+
+.number-of-wins {
+  margin-top: 0px;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48vw;
+
+
+}
+
+.player-turn {
+  margin-bottom: 5vh;
+}
+
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 48vh;
+  width: 48vw;
+}
+
+.box-space {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 15vw;
+  border-style: solid;
+}
