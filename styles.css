@@ -16,8 +16,8 @@ body {
 }
 
 img {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
@@ -31,7 +31,7 @@ img {
 .main-page {
   display: flex;
   height: 100vh;
-  color: white;
+  color: #FFFFFF;
 
 }
 
@@ -40,34 +40,43 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25vw;
-  margin-top: 10vh;
+  width: 26vw;
+  margin-top: 21vh;
+
+}
 
 
-
+.number-of-wins {
+  margin-top: 0px;
 }
 
 .game-area {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50vw;
+  width: 48vw;
 
 
 }
 
+.player-turn {
+  margin-bottom: 5vh;
+}
 
 .game-grid {
   display: flex;
   flex-wrap: wrap;
-  height: 50vh;
-  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  height: 48vh;
+  width: 48vw;
 }
 
 .box-space {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  width: 10vw;
+  height: 15vh;
+  width: 15vw;
+  border-style: solid;
 }
