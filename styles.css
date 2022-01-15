@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-image: url("./assets/solar-system-background_23-2147939182.jpeg");
+  /* background-image: url("./assets/solar-system-background_23-2147939182.jpeg"); */
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px;
@@ -31,7 +31,7 @@ img {
 .main-page {
   display: flex;
   height: 100vh;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
 
 }
 
