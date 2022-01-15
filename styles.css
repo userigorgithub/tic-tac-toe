@@ -64,10 +64,11 @@ img {
 }
 
 .game-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
   height: 48vh;
   width: 48vw;
 }
