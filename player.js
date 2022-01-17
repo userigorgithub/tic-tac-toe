@@ -1,7 +1,11 @@
 class Player {
-  constructor(icon) {
-    this.id = Date.now();
-    this.icon = icon;
-    this.wins = [];
+  constructor(id, token) {
+    this.id = id;
+    this.token = token;
+    this.wins = 0;
+  }
+
+  addWins() {
+    this.wins++;
   }
 }

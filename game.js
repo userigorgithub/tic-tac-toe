@@ -1,25 +1,24 @@
 class Game {
-  constructor(player) {
-    this.id = Date.now();
-    this.player = player;
+  constructor() {
+    this.playerOne = new Player("one", "token-one");
+    this.playerTwo = new Player("two", "token-two");
+    this.turn = this.playerOne;
 
-    this.playerOneTurn = false;
     this.reset = false;
+
   }
 
 //keeping track of data
 
-  isPlayerTurn() {
-    this.playerOneTurn = !this.playerOneTurn;
+  isTurn() {
+    this.playerOne = !this.playerOne;
   }
 
-  isPlayerWin() {
-
+  isWin() {
 
   }
 
-  isPlayerDraw() {
-
+  isDraw() {
 
   }
 
