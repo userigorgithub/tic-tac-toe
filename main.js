@@ -9,7 +9,7 @@ console.log(boxes)
 
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelector(".box-space");
-var turnMessage = document.querySelector(".player-turn");
+var turnMessage = document.querySelector(".player-message");
 
 
 
