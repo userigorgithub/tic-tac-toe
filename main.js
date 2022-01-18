@@ -3,13 +3,14 @@
 var game = new Game();
 
 var boxes = Array.from(document.getElementsByClassName("box-space"));
-
 console.log(boxes)
 
 // Query Selector(s)
 
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelector(".box-space");
+var turnMessage = document.querySelector(".player-turn");
+
 
 
 // Event Listener(s)
@@ -21,9 +22,6 @@ gameGrid.addEventListener('click', clickBox);
 // Function(s) and Event Handler(s)
 
 
-// const clickBox = (e) => {
-//   console.log('clicked')
-// }
 
 function enterToken(box) {
   game.gameArea.splice(box, 1)
@@ -33,10 +31,20 @@ function enterToken(box) {
 function clickBox() {
   if (event.target.classList.contains("box-space")) {
     enterToken(event.target.id);
-    event.target.innerHTML = `<img class="token" src=${game.currentTurn.token} />`
+    event.target.innerHTML = `<img class="token" src=${game.currentTurn.token} />`;
+    //event.target.classList.remove('hover');
     game.changeTurn();
+    changeTurnMessage();
   }
 }
+
+
+function changeTurnMessage() {
+  turnMessage.innerText = `It's ${game.currentTurn.id}'s Turn!`;
+}
+
+
+
 
 
 // function clickBox() {
