@@ -8,6 +8,8 @@ class Game {
 
 
     this.draw = false;
+
+    
     this.reset = false;
 
   }
