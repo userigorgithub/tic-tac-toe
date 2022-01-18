@@ -34,7 +34,7 @@ function clickBox() {
   if (event.target.classList.contains("box-space")) {
     enterToken(event.target.id);
     event.target.innerHTML = `<img class="token" src=${game.currentTurn.token} />`
-
+    game.changeTurn();
   }
 }
 

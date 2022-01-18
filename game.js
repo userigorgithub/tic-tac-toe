@@ -15,7 +15,15 @@ class Game {
 
 //keeping track of data
 
-  isTurn() {
+
+
+  changeTurn() {
+    if (this.currentTurn === this.playerOne) {
+      this.currentTurn = this.playerTwo;
+    } else if (this.currentTurn === this.playerTwo) {
+      this.currentTurn = this.playerOne;
+    }
+
 
 
     // this.playerOne = !this.playerOne;
