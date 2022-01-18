@@ -1,9 +1,14 @@
 class Game {
   constructor() {
-    this.playerOne = new Player("one", "token-one");
-    this.playerTwo = new Player("two", "token-two");
-    this.turn = this.playerOne;
+    this.playerOne = new Player("one", "./assets/planetone-galaxy-svgrepo-com.svg");
+    this.playerTwo = new Player("two", "./assets/planettwo-galaxy-svgrepo-com.svg");
 
+    this.gameArea = ["","","","","","","","",""];
+    this.currentTurn = this.playerOne;
+
+
+
+    this.draw = false;
     this.reset = false;
 
   }
@@ -11,7 +16,9 @@ class Game {
 //keeping track of data
 
   isTurn() {
-    this.playerOne = !this.playerOne;
+
+
+    // this.playerOne = !this.playerOne;
   }
 
   isWin() {
