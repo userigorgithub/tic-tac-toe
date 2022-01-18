@@ -8,8 +8,8 @@ console.log(boxes)
 // Query Selector(s)
 
 var gameGrid = document.querySelector(".game-grid");
-var boxArea = document.querySelector(".box-space");
-var turnMessage = document.querySelector(".player-message");
+var boxArea = document.querySelectorAll(".box-space");
+var playerMessage = document.querySelector(".player-message");
 
 
 
@@ -23,28 +23,67 @@ gameGrid.addEventListener('click', clickBox);
 
 
 
-function enterToken(box) {
-  game.gameArea.splice(box, 1)
-}
 
 
-function clickBox() {
-  if (event.target.classList.contains("box-space")) {
-    enterToken(event.target.id);
-    event.target.innerHTML = `<img class="token" src=${game.currentTurn.token} />`;
-    //event.target.classList.remove('hover');
+function clickBox(event) {
+  var box = event.target;
+  var boxId = event.target.id;
+  if (!box.innerHTML) {
+    event.target.innerHTML = `<img class="token" src=${game.playerTurn.token} alt="planet" />`;
+
+
+    game.changeBoxStatus(boxId);
+    game.totalTurns++;
     game.changeTurn();
     changeTurnMessage();
+    game.checkWin();
+    game.checkDraw();
+    return;
+
   }
 }
 
 
+
+// function enterToken(box) {
+//   game.boxes.splice(box, 1)
+// }
+//
+// function clickBox(event) {
+//   if (event.target.classList.contains("box-space")) {
+//     enterToken(event.target.id);
+//     event.target.innerHTML = `<img class="token" src=${game.playerTurn.token} />`;
+//     // event.target.classList.remove('hover');
+//     game.changeTurn();
+//     changeTurnMessage();
+//     game.checkWin();
+//     return;
+//   }
+// }
+
+
 function changeTurnMessage() {
-  turnMessage.innerText = `It's ${game.currentTurn.id}'s Turn!`;
+  if (game.playerOne) {
+  playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+  } else if (game.playerTwo) {
+  playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+  }
 }
 
 
 
+function winMessage() {
+  playerMessage.innerText = `${this.playerTurn.id} Wins!`;
+}
+
+function drawMessage() {
+  playerMessage.innerText = `NO Player Wins!`;
+}
+
+
+function disableGameGrid() {
+  gameGrid.removeEventListener('click', clickBox);
+}
 
 
 // function clickBox() {

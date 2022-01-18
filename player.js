@@ -7,5 +7,6 @@ class Player {
 
   addWins() {
     this.wins++;
+    return this.wins;
   }
 }
