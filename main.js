@@ -6,7 +6,7 @@ var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
 var playerOneSc = document.querySelector(".number-of-wins-one");
-var playerTwoSc = document.querySelector(".number-of-wins-two")
+var playerTwoSc = document.querySelector(".number-of-wins-two");
 
 // Event Listener(s):
 gameGrid.addEventListener('click', clickBox);
@@ -30,14 +30,18 @@ function clickBox(event) {
 
 function changeTurnMessage() {
   if (game.playerOne) {
-  playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+    playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
   } else if (game.playerTwo) {
-  playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+    playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
   }
 }
 
 function winMessage() {
-  playerMessage.innerHTML = `${game.playerTurn.id} Wins!`;
+  if (game.playerOne) {
+    playerMessage.innerText = `${game.playerTurn.id} Wins!`;
+  } else if (game.playerTwo) {
+    playerMessage.innerText = `${game.playerTurn.id} Wins!`;
+  }
 }
 
 function drawMessage() {
@@ -65,6 +69,6 @@ function resetGame() {
   game.boxes = ['','','','','','','','','',];
   game.playerEarth = true;
   game.totalTurns = 0;
-  playerMessage.innerText = `It's Player 1's Turn!`;
+  playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
   enableGameGrid();
 }

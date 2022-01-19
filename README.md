@@ -10,7 +10,7 @@
 - Chrome Dev Tools
 
 ## Overview
-Tic Tac Toe was the project to gain better understanding in writing HTML, CSS, and JavaScript code and their interaction between each other. It utilizes classes and data model/DOM interaction. Access it by clicking [HERE! (coming soon)]()
+Tic Tac Toe was the project to gain better understanding in writing HTML, CSS, and JavaScript code and their interaction between each other. It utilizes classes and data model/DOM interaction. Access it by clicking [HERE!](https://userigorgithub.github.io/tic-tac-toe/)
 
 ## Feature(s)
 - Play classic themed Tic Tac Toe!
@@ -23,14 +23,14 @@ Tic Tac Toe was the project to gain better understanding in writing HTML, CSS, a
 ## User Instructions
 1. This is the main page of the application.
 
-<img width="822" alt="Screen Shot 2022-01-18 at 9 52 03 PM" src="https://user-images.githubusercontent.com/87003746/150066493-e5a1b0ba-47b5-4757-9da6-6df08267e463.png">
+<img width="825" alt="Screen Shot 2022-01-18 at 9 51 26 PM" src="https://user-images.githubusercontent.com/87003746/150066571-f8159889-8fa6-4ffb-a53d-d6bfb86bb60e.png">
 
 2. Click on one of nine boxes to start playing as player 1, then click on one of remaining boxes to start playing as player 2.
 3. Getting three boxes with your tokens horizontally, vertically, or diagonally will win the game!
 Note: But be careful not to allow other player succeed first!
 4. Win adds to the player's wins and game restarts automatically.
 
-<img width="825" alt="Screen Shot 2022-01-18 at 9 51 26 PM" src="https://user-images.githubusercontent.com/87003746/150066571-f8159889-8fa6-4ffb-a53d-d6bfb86bb60e.png">
+<img width="822" alt="Screen Shot 2022-01-18 at 9 52 03 PM" src="https://user-images.githubusercontent.com/87003746/150066493-e5a1b0ba-47b5-4757-9da6-6df08267e463.png">
 
 5. If no player succeeds in getting three tokens horizontally, vertically, or diagonally, game is a draw.
 6. No wins are added and game restarts automatically.

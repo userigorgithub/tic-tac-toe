@@ -4,8 +4,6 @@ class Game {
     this.playerTwo = new Player("Player 2", "./assets/planettwo-galaxy-svgrepo-com.svg");
     this.playerTurn = this.playerOne;
     this.boxes = ['','','','','','','','',''];
-    this.playerEarth = true;
-    this.playerMars = false;
     this.totalTurns = 0;
   }
 
@@ -52,11 +50,11 @@ class Game {
 
   checkDraw() {
     if (this.totalTurns === 9 && !this.checkWin()) {
-        drawMessage();
-        showScore();
-        disableGameGrid();
-        setTimeout(resetGame, 2000);
-        return true;
+      drawMessage();
+      showScore();
+      disableGameGrid();
+      setTimeout(resetGame, 2000);
+      return true;
     }
   }
 }
