@@ -3,24 +3,16 @@ class Game {
     this.playerOne = new Player("Player 1", "./assets/planetone-galaxy-svgrepo-com.svg");
     this.playerTwo = new Player("Player 2", "./assets/planettwo-galaxy-svgrepo-com.svg");
     this.playerTurn = this.playerOne;
-
     this.boxes = ['','','','','','','','',''];
-
     this.playerEarth = true;
     this.playerMars = false;
     this.totalTurns = 0;
-
-    // this.isWin = false;
-    // this.isDraw = false;
-    // this.reset = false;
-
   }
 
   changeBoxStatus(boxId) {
     var curBox = boxId;
     this.boxes[curBox] = this.playerTurn.token;
   }
-
 
   changeTurn() {
     if (this.playerTurn === this.playerOne) {
@@ -45,36 +37,23 @@ class Game {
       winMessage();
       this.playerOne.wins++;
       disableGameGrid();
-
+      setTimeout(resetGame, 2000);
       return true;
-
     } else if (mars) {
       winMessage();
       this.playerTwo.wins++;
       disableGameGrid();
-
+      setTimeout(resetGame, 2000);
       return true;
     }
-
   }
-
 
   checkDraw() {
-    if (this.totalTurns === 9) {
-      // console.log(drawMessage());
-      // hide(playerTurn);
+    if (this.totalTurns === 9 && !this.checkWin()) {
         drawMessage();
         disableGameGrid();
-        // setTimeout(resetGame, 2000)
+        setTimeout(resetGame, 2000);
         return true;
     }
-
   }
-
-
-
-//   resetGame() {
-//     this.reset = true;
-//   }
-
 }

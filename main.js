@@ -10,12 +10,7 @@ var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
 
 // Event Listener(s):
-
-// window.addEventListener('load', refreshBoard);
-
 gameGrid.addEventListener('click', clickBox);
-
-
 
 // Function(s) and Event Handler(s):
 
@@ -26,16 +21,6 @@ gameGrid.addEventListener('click', clickBox);
 //   }
 //   game.boxes = ['','','','','','','','',''];
 // }
-//
-//
-// function clickBox(e) {
-//   var boxId = e.target.id;
-//   if (!game.boxes[boxId]) {
-//     this.boxes[boxId] = playerTurn;
-//     e.target.innerText = playerTurn;
-//     game.changeTurn();
-//   }
-// }
 
 
 function clickBox(event) {
@@ -43,20 +28,14 @@ function clickBox(event) {
   var boxId = event.target.id;
   if (!box.innerHTML && !box.alt) {
     event.target.innerHTML =
-    // `${game.playerTurn.token}`;
-
-
     `<img class="token" src=${game.playerTurn.token} alt="planet" />`;
-
     game.changeBoxStatus(boxId);
     game.totalTurns++;
     changeTurnMessage();
-
     game.changeTurn();
     game.checkWin();
     game.checkDraw();
     return;
-
   }
 }
 
@@ -75,7 +54,6 @@ function winMessage() {
 function drawMessage() {
   playerMessage.innerText = `NO Player Wins!`;
 }
-
 
 function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
