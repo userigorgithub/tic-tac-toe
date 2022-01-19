@@ -37,13 +37,13 @@ class Game {
       winMessage();
       this.playerOne.wins++;
       disableGameGrid();
-      setTimeout(resetGame, 2000);
+      setTimeout(resetGame, 7000);
       return true;
     } else if (mars) {
       winMessage();
       this.playerTwo.wins++;
       disableGameGrid();
-      setTimeout(resetGame, 2000);
+      setTimeout(resetGame, 7000);
       return true;
     }
   }
@@ -52,7 +52,7 @@ class Game {
     if (this.totalTurns === 9 && !this.checkWin()) {
         drawMessage();
         disableGameGrid();
-        setTimeout(resetGame, 2000);
+        setTimeout(resetGame, 7000);
         return true;
     }
   }
