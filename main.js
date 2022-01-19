@@ -1,62 +1,28 @@
 // Global Variable(s):
 var game = new Game();
 
-var boxes = Array.from(document.getElementsByClassName("box-space"));
-console.log(boxes)
-
 // Query Selector(s):
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
 
 // Event Listener(s):
-
-// window.addEventListener('load', refreshBoard);
-
 gameGrid.addEventListener('click', clickBox);
 
-
-
 // Function(s) and Event Handler(s):
-
-// function refreshBoard() {
-//   for (var i = 0; i < boxArea.length; i++) {
-//     boxArea[i].innerHTML = '';
-//
-//   }
-//   game.boxes = ['','','','','','','','',''];
-// }
-//
-//
-// function clickBox(e) {
-//   var boxId = e.target.id;
-//   if (!game.boxes[boxId]) {
-//     this.boxes[boxId] = playerTurn;
-//     e.target.innerText = playerTurn;
-//     game.changeTurn();
-//   }
-// }
-
-
 function clickBox(event) {
   var box = event.target;
   var boxId = event.target.id;
   if (!box.innerHTML && !box.alt) {
     event.target.innerHTML =
-    // `${game.playerTurn.token}`;
-
-
     `<img class="token" src=${game.playerTurn.token} alt="planet" />`;
-
     game.changeBoxStatus(boxId);
     game.totalTurns++;
-    changeTurnMessage();
-
     game.changeTurn();
+    changeTurnMessage();
     game.checkWin();
     game.checkDraw();
     return;
-
   }
 }
 
@@ -76,11 +42,21 @@ function drawMessage() {
   playerMessage.innerText = `NO Player Wins!`;
 }
 
-
 function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
 }
 
 function enableGameGrid() {
   gameGrid.addEventListener('click', clickBox);
+}
+
+function resetGame() {
+  for (var i = 0; i < boxArea.length; i++) {
+    boxArea[i].innerHTML = '';
+  }
+  game.boxes = ['','','','','','','','','',];
+  game.playerEarth = true;
+  game.totalTurns = 0;
+  playerMessage.innerText = `It's Player 1's Turn!`;
+  enableGameGrid();
 }
