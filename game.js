@@ -1,7 +1,7 @@
 class Game {
   constructor() {
-    this.playerOne = new Player("Player 1", "🌎");
-    this.playerTwo = new Player("Player 2", "token");
+    this.playerOne = new Player("Player 1", "./assets/planetone-galaxy-svgrepo-com.svg");
+    this.playerTwo = new Player("Player 2", "./assets/planettwo-galaxy-svgrepo-com.svg");
     this.playerTurn = this.playerOne;
 
     this.boxes = ['','','','','','','','',''];

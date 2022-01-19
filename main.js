@@ -94,7 +94,7 @@ function changeTurnMessage() {
 
 
 function winMessage() {
-  playerMessage.innerText = `${this.playerTurn.id} Wins!`;
+  playerMessage.innerHTML = `${game.playerTurn.id} Wins!`;
 }
 
 function drawMessage() {
