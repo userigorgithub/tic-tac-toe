@@ -1,34 +1,25 @@
 class Game {
   constructor() {
-    this.playerOne = new Player("Player 1", "./assets/planetone-galaxy-svgrepo-com.svg");
-    this.playerTwo = new Player("Player 2", "./assets/planettwo-galaxy-svgrepo-com.svg");
+    this.playerOne = new Player("Player 1", "🌎");
+    this.playerTwo = new Player("Player 2", "token");
     this.playerTurn = this.playerOne;
 
-    this.boxes = ["","","","","","","","",""];
+    this.boxes = ['','','','','','','','',''];
 
     this.playerEarth = true;
     this.playerMars = false;
     this.totalTurns = 0;
 
-    this.isWin = false;
-    this.isDraw = false;
-    this.reset = false;
+    // this.isWin = false;
+    // this.isDraw = false;
+    // this.reset = false;
 
   }
-
-//-------------------------------------------
-
-  // takeTurn(i) {
-  //
-  // }
-
 
   changeBoxStatus(boxId) {
     var curBox = boxId;
     this.boxes[curBox] = this.playerTurn.token;
   }
-
-//keeping track of data
 
 
   changeTurn() {
@@ -40,36 +31,40 @@ class Game {
 
   }
 
-
-  winPatterns(token) {
-    if (this.boxes[0] === token && this.boxes[1] === token && this.boxes[2] === token) {
-      this.isWin = true;
-
+  winPatterns(i) {
+    if (this.boxes[0] === i && this.boxes[1] === i && this.boxes[2] === i || this.boxes[3] === i && this.boxes[4] === i && this.boxes[5] === i || this.boxes[6] === i && this.boxes[7] === i && this.boxes[8] === i || this.boxes[0] === i && this.boxes[3] === i && this.boxes[6] === i || this.boxes[1] === i && this.boxes[4] === i && this.boxes[7] === i || this.boxes[2] === i && this.boxes[5] === i && this.boxes[8] === i || this.boxes[0] === i && this.boxes[4] === i && this.boxes[8] === i || this.boxes[2] === i && this.boxes[4] === i && this.boxes[6] === i) {
       return true;
-
     } else {
       return false;
     }
   }
 
-  checkWin() {
-
-  }
-
-
-
-  // winPatterns(token) {
-  //   if (this.boxes[0] === token) {
-  //     if (this.boxes[1] === token && this.boxes[2] === token) {
-  //       playerMessage.innerText = `gtgbthbth`
-  //       console.log(`${token} wins top`);
-  //       this.isWin = true;
+  // winPatterns() {
+  //   if (this.boxes[0] === this.playerTurn) {
+  //     if (this.boxes[1] === this.playerTurn && this.boxes[2] === this.playerTurn) {
+  //       winMessage();
+  //       console.log(`${this.playerTurn.id} wins top`);
+  //
   //       return true;
   //     }
   //   }
   // }
 
 
+  checkWin() {
+    var earth = this.winPatterns(`${this.playerOne.token}`);
+    var mars = this.winPatterns(`${this.playerTwo.token}`);
+    if (earth) {
+      winMessage();
+      this.playerOne.wins++;
+
+      return true;
+    } else if (mars) {
+      winMessage();
+      this.playerTwo.wins++;
+    }
+
+  }
 
 
   checkDraw() {
@@ -77,13 +72,17 @@ class Game {
       // console.log(drawMessage());
       // hide(playerTurn);
         drawMessage();
+        disableGameGrid();
+        // setTimeout(resetGame, 2000)
+        return true;
     }
 
   }
 
 
 
-  resetGame() {
-    this.reset = true;
-  }
+//   resetGame() {
+//     this.reset = true;
+//   }
+
 }
