@@ -1,9 +1,6 @@
 // Global Variable(s):
 var game = new Game();
 
-var boxes = Array.from(document.getElementsByClassName("box-space"));
-console.log(boxes)
-
 // Query Selector(s):
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
@@ -13,16 +10,6 @@ var playerMessage = document.querySelector(".player-message");
 gameGrid.addEventListener('click', clickBox);
 
 // Function(s) and Event Handler(s):
-
-// function refreshBoard() {
-//   for (var i = 0; i < boxArea.length; i++) {
-//     boxArea[i].innerHTML = '';
-//
-//   }
-//   game.boxes = ['','','','','','','','',''];
-// }
-
-
 function clickBox(event) {
   var box = event.target;
   var boxId = event.target.id;
@@ -31,8 +18,8 @@ function clickBox(event) {
     `<img class="token" src=${game.playerTurn.token} alt="planet" />`;
     game.changeBoxStatus(boxId);
     game.totalTurns++;
-    changeTurnMessage();
     game.changeTurn();
+    changeTurnMessage();
     game.checkWin();
     game.checkDraw();
     return;
@@ -61,4 +48,15 @@ function disableGameGrid() {
 
 function enableGameGrid() {
   gameGrid.addEventListener('click', clickBox);
+}
+
+function resetGame() {
+  for (var i = 0; i < boxArea.length; i++) {
+    boxArea[i].innerHTML = '';
+  }
+  game.boxes = ['','','','','','','','','',];
+  game.playerEarth = true;
+  game.totalTurns = 0;
+  playerMessage.innerText = `It's Player 1's Turn!`;
+  enableGameGrid();
 }
