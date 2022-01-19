@@ -5,6 +5,8 @@ var game = new Game();
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
+var playerOneSc = document.querySelector(".number-of-wins-one");
+var playerTwoSc = document.querySelector(".number-of-wins-two")
 
 // Event Listener(s):
 gameGrid.addEventListener('click', clickBox);
@@ -42,6 +44,11 @@ function drawMessage() {
   playerMessage.innerText = `NO Player Wins!`;
 }
 
+function showScore() {
+  playerOneSc.innerHTML = `${game.playerOne.wins}`;
+  playerTwoSc.innerHTML = `${game.playerTwo.wins}`;
+}
+
 function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
 }
@@ -54,6 +61,7 @@ function resetGame() {
   for (var i = 0; i < boxArea.length; i++) {
     boxArea[i].innerHTML = '';
   }
+  showScore();
   game.boxes = ['','','','','','','','','',];
   game.playerEarth = true;
   game.totalTurns = 0;
