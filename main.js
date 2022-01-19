@@ -1,18 +1,13 @@
 // Global Variable(s):
-
 var game = new Game();
 
 var boxes = Array.from(document.getElementsByClassName("box-space"));
 console.log(boxes)
 
 // Query Selector(s):
-
-
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
-
-
 
 // Event Listener(s):
 
@@ -55,33 +50,15 @@ function clickBox(event) {
 
     game.changeBoxStatus(boxId);
     game.totalTurns++;
-    game.changeTurn();
     changeTurnMessage();
+
+    game.changeTurn();
     game.checkWin();
     game.checkDraw();
     return;
 
   }
 }
-
-
-
-// function enterToken(box) {
-//   game.boxes.splice(box, 1)
-// }
-//
-// function clickBox(event) {
-//   if (event.target.classList.contains("box-space")) {
-//     enterToken(event.target.id);
-//     event.target.innerHTML = `<img class="token" src=${game.playerTurn.token} />`;
-//     // event.target.classList.remove('hover');
-//     game.changeTurn();
-//     changeTurnMessage();
-//     game.checkWin();
-//     return;
-//   }
-// }
-
 
 function changeTurnMessage() {
   if (game.playerOne) {
@@ -90,8 +67,6 @@ function changeTurnMessage() {
   playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
   }
 }
-
-
 
 function winMessage() {
   playerMessage.innerHTML = `${game.playerTurn.id} Wins!`;
@@ -106,13 +81,6 @@ function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
 }
 
-
-// function clickBox() {
-//   console.log('box clicked')
-//   if (event.target.classList.contains("box-space")) {
-//     if (!game.boxArea.includes(event.target.id)) {
-//       game.currentTurn.boxArea.push(event.target.id);
-//
-//     }
-//   }
-// }
+function enableGameGrid() {
+  gameGrid.addEventListener('click', clickBox);
+}

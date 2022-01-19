@@ -28,7 +28,6 @@ class Game {
     } else if (this.playerTurn === this.playerTwo) {
       this.playerTurn = this.playerOne;
     }
-
   }
 
   winPatterns(i) {
@@ -39,29 +38,22 @@ class Game {
     }
   }
 
-  // winPatterns() {
-  //   if (this.boxes[0] === this.playerTurn) {
-  //     if (this.boxes[1] === this.playerTurn && this.boxes[2] === this.playerTurn) {
-  //       winMessage();
-  //       console.log(`${this.playerTurn.id} wins top`);
-  //
-  //       return true;
-  //     }
-  //   }
-  // }
-
-
   checkWin() {
     var earth = this.winPatterns(`${this.playerOne.token}`);
     var mars = this.winPatterns(`${this.playerTwo.token}`);
     if (earth) {
       winMessage();
       this.playerOne.wins++;
+      disableGameGrid();
 
       return true;
+
     } else if (mars) {
       winMessage();
       this.playerTwo.wins++;
+      disableGameGrid();
+
+      return true;
     }
 
   }
