@@ -36,14 +36,16 @@ class Game {
     if (earth) {
       winMessage();
       this.playerOne.wins++;
+      showScore();
       disableGameGrid();
-      setTimeout(resetGame, 7000);
+      setTimeout(resetGame, 2000);
       return true;
     } else if (mars) {
       winMessage();
       this.playerTwo.wins++;
+      showScore();
       disableGameGrid();
-      setTimeout(resetGame, 7000);
+      setTimeout(resetGame, 2000);
       return true;
     }
   }
@@ -51,8 +53,9 @@ class Game {
   checkDraw() {
     if (this.totalTurns === 9 && !this.checkWin()) {
         drawMessage();
+        showScore();
         disableGameGrid();
-        setTimeout(resetGame, 7000);
+        setTimeout(resetGame, 2000);
         return true;
     }
   }
