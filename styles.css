@@ -9,9 +9,9 @@ html {
 }
 
 body {
-  background-image: url("./assets/images.jpeg");
+  /* background-image: url("./assets/main-image.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   margin: 0px;
 }
 
@@ -25,6 +25,9 @@ img {
 /* MAIN PAGE RULES */
 
 .main-page {
+  /* background-image: url("./assets/main-image.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat; */
   display: flex;
   height: 100vh;
   color: #FFFFFF;
@@ -36,7 +39,19 @@ img {
   flex-direction: column;
   align-items: center;
   width: 26vw;
-  margin-top: 21vh;
+  /* margin-top: 21vh; */
+}
+
+.player-one-area {
+  background-image: url("./assets/earth.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.player-two-area {
+  background-image: url("./assets/mars.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .number-of-wins {
@@ -44,6 +59,9 @@ img {
 }
 
 .game-area {
+  background-image: url("./assets/main-image.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
