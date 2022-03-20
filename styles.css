@@ -15,8 +15,8 @@ body {
 img {
   height: 80px;
   width: 80px;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 /* MAIN PAGE RULES */
@@ -45,8 +45,20 @@ img {
   background-image: url("./assets/mars.jpeg");
 }
 
+.player-one,
+.player-two {
+  margin-top: 140px;
+  font-size: 40px;
+}
+
 .number-of-wins {
   margin-top: 0px;
+  font-size: 30px;
+}
+
+.number-of-wins-one,
+.number-of-wins-two {
+  font-size: 30px;
 }
 
 .game-area {
@@ -59,8 +71,12 @@ img {
   width: 48vw;
 }
 
-.player-turn {
-  margin-bottom: 5vh;
+.game-title {
+  font-size: 40px;
+}
+
+.player-message {
+  font-size: 30px;
 }
 
 .game-grid {
