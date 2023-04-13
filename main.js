@@ -36,11 +36,15 @@ function changeTurnMessage() {
   }
 }
 
-function winMessage() {
+function earthWinMessage() {
   if (game.playerOne) {
-    playerMessage.innerText = `${game.playerTurn.id} Wins!`;
-  } else if (game.playerTwo) {
-    playerMessage.innerText = `${game.playerTurn.id} Wins!`;
+    playerMessage.innerText = `${game.playerOne.id} Wins!`;
+  }
+}
+
+function marsWinMessage() {
+  if (game.playerTwo) {
+    playerMessage.innerText = `${game.playerTwo.id} Wins!`;
   }
 }
 
@@ -65,10 +69,8 @@ function resetGame() {
   for (var i = 0; i < boxArea.length; i++) {
     boxArea[i].innerHTML = '';
   }
-  showScore();
-  game.boxes = ['','','','','','','','','',];
-  game.playerEarth = true;
   game.totalTurns = 0;
   playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+  game.boxes = ['','','','','','','','',''];
   enableGameGrid();
 }

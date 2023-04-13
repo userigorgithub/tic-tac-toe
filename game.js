@@ -8,8 +8,8 @@ class Game {
   }
 
   changeBoxStatus(boxId) {
-    var curBox = boxId;
-    this.boxes[curBox] = this.playerTurn.token;
+    var currentBox = boxId;
+    this.boxes[currentBox] = this.playerTurn.token;
   }
 
   changeTurn() {
@@ -32,15 +32,15 @@ class Game {
     var earth = this.winPatterns(`${this.playerOne.token}`);
     var mars = this.winPatterns(`${this.playerTwo.token}`);
     if (earth) {
-      winMessage();
       this.playerOne.wins++;
+      earthWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
       return true;
     } else if (mars) {
-      winMessage();
       this.playerTwo.wins++;
+      marsWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
