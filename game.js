@@ -20,14 +20,6 @@ class Game {
     }
   }
 
-  // changeTurn() {
-  //   if (this.playerTurn === this.playerOne) {
-  //     this.playerTurn = this.playerTwo;
-  //   } else {
-  //     this.playerTurn = this.playerOne;
-  //   }
-  // }
-
   winPatterns(i) {
     if (this.boxes[0] === i && this.boxes[1] === i && this.boxes[2] === i || this.boxes[3] === i && this.boxes[4] === i && this.boxes[5] === i || this.boxes[6] === i && this.boxes[7] === i && this.boxes[8] === i || this.boxes[0] === i && this.boxes[3] === i && this.boxes[6] === i || this.boxes[1] === i && this.boxes[4] === i && this.boxes[7] === i || this.boxes[2] === i && this.boxes[5] === i && this.boxes[8] === i || this.boxes[0] === i && this.boxes[4] === i && this.boxes[8] === i || this.boxes[2] === i && this.boxes[4] === i && this.boxes[6] === i) {
       return true;
@@ -40,19 +32,15 @@ class Game {
     var earth = this.winPatterns(`${this.playerOne.token}`);
     var mars = this.winPatterns(`${this.playerTwo.token}`);
     if (earth) {
-      // winMessage();
       this.playerOne.wins++;
-      earthWinMessage(); //new
-      // changeTurnMessage();
+      earthWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
       return true;
     } else if (mars) {
-      // winMessage();
       this.playerTwo.wins++;
-      marsWinMessage(); //new
-      // changeTurnMessage();
+      marsWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);

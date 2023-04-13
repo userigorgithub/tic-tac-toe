@@ -21,7 +21,6 @@ function clickBox(event) {
     game.changeBoxStatus(boxId);
     game.totalTurns++;
     game.changeTurn();
-    // winMessage();
     changeTurnMessage();
     game.checkWin();
     game.checkDraw();
@@ -29,15 +28,13 @@ function clickBox(event) {
   }
 }
 
-// function winMessage() {
-//   if (game.playerOne) {
-//     playerMessage.HTML = `<h2 class="player-message">Player 1 Wins!</h2>`;
-//     // playerMessage.innerText = `${game.playerTurn.id} Wins!`;
-//   } else if (game.playerTwo) {
-//     playerMessage.innerHTML = `<h2 class="player-message">Player 2 Wins!</h2>`;
-//     // playerMessage.innerText = `${game.playerTurn.id} Wins!`;
-//   }
-// }
+function changeTurnMessage() {
+  if (game.playerOne) {
+    playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+  } else if (game.playerTwo) {
+    playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+  }
+}
 
 function earthWinMessage() {
   if (game.playerOne) {
@@ -60,22 +57,6 @@ function showScore() {
   playerTwoSc.innerHTML = `${game.playerTwo.wins}`;
 }
 
-function changeTurnMessage() {
-  if (game.playerOne) {
-    playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
-  } else if (game.playerTwo) {
-    playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
-  }
-}
-
-// function changeTurnMessage() {
-//   if (game.playerOne) {
-//     playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
-//   } else {
-//     playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
-//   }
-// }
-
 function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
 }
@@ -88,12 +69,8 @@ function resetGame() {
   for (var i = 0; i < boxArea.length; i++) {
     boxArea[i].innerHTML = '';
   }
-  // showScore();
-  // game.playerEarth = true;
   game.totalTurns = 0;
-  // game.changeTurn();
   playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
-  // changeTurnMessage();
   game.boxes = ['','','','','','','','',''];
   enableGameGrid();
 }
