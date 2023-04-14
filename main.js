@@ -5,11 +5,13 @@ var game = new Game();
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
-var playerOneSc = document.querySelector(".number-of-wins-one");
-var playerTwoSc = document.querySelector(".number-of-wins-two");
+var playerOneScore = document.querySelector(".number-of-wins-one");
+var playerTwoScore = document.querySelector(".number-of-wins-two");
+var resetScoreBtn = document.querySelector(".reset-button");
 
 // Event Listener(s):
 gameGrid.addEventListener('click', clickBox);
+resetScoreBtn.addEventListener('click', resetScore);
 
 // Function(s) and Event Handler(s):
 function clickBox(event) {
@@ -53,8 +55,8 @@ function drawMessage() {
 }
 
 function showScore() {
-  playerOneSc.innerHTML = `${game.playerOne.wins}`;
-  playerTwoSc.innerHTML = `${game.playerTwo.wins}`;
+  playerOneScore.innerHTML = `${game.playerOne.wins}`;
+  playerTwoScore.innerHTML = `${game.playerTwo.wins}`;
 }
 
 function disableGameGrid() {
