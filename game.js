@@ -57,4 +57,9 @@ class Game {
       return true;
     }
   }
+
+  clearWins() {
+    this.playerOne.wins = 0;
+    this.playerTwo.wins = 0;
+  }
 }
