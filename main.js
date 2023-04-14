@@ -76,3 +76,8 @@ function resetGame() {
   game.boxes = ['','','','','','','','',''];
   enableGameGrid();
 }
+
+function resetScore() {
+  game.clearWins();
+  showScore();
+}
