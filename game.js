@@ -7,6 +7,15 @@ class Game {
     this.totalTurns = 0;
   }
 
+  randomizePlayer() {
+    var randomNumber = Math.floor(Math.random() * 2 + 1);
+    if (randomNumber === 1) {
+      this.playerTurn = this.playerOne;
+    } else {
+      this.playerTurn = this.playerTwo;
+    }
+  }
+
   changeBoxStatus(boxId) {
     var currentBox = boxId;
     this.boxes[currentBox] = this.playerTurn.token;
