@@ -10,6 +10,9 @@ var playerTwoScore = document.querySelector(".number-of-wins-two");
 var resetScoreBtn = document.querySelector(".reset-button");
 
 // Event Listener(s):
+window.addEventListener('load', function() {
+  game.randomizePlayer();
+})
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
 
@@ -80,4 +83,5 @@ function resetGame() {
 function resetScore() {
   game.clearWins();
   showScore();
+  game.randomizePlayer();
 }
