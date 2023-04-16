@@ -8,6 +8,7 @@ var playerMessage = document.querySelector(".player-message");
 var playerOneScore = document.querySelector(".number-of-wins-one");
 var playerTwoScore = document.querySelector(".number-of-wins-two");
 var resetScoreBtn = document.querySelector(".reset-button");
+var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
 window.addEventListener('load', function() {
