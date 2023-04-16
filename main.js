@@ -9,6 +9,7 @@ var playerOneScore = document.querySelector(".number-of-wins-one");
 var playerTwoScore = document.querySelector(".number-of-wins-two");
 var resetScoreBtn = document.querySelector(".reset-button");
 
+// Event Listener(s):
 window.addEventListener('load', function() {
   game.randomizePlayer();
 })
@@ -17,7 +18,6 @@ resetScoreBtn.addEventListener('click', resetScore);
 
 // Function(s) and Event Handler(s):
 function clickBox(event) {
-  // game.randomizePlayer();
   var box = event.target;
   var boxId = event.target.id;
   if (!box.innerHTML && !box.alt) {
