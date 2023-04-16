@@ -2,7 +2,7 @@ class Game {
   constructor() {
     this.playerOne = new Player("Player 1", "./assets/planetone-galaxy-svgrepo-com.svg");
     this.playerTwo = new Player("Player 2", "./assets/planettwo-galaxy-svgrepo-com.svg");
-    this.playerTurn = this.playerOne;
+    this.playerTurn;
     this.boxes = ['','','','','','','','',''];
     this.totalTurns = 0;
   }
@@ -11,8 +11,10 @@ class Game {
     var randomNumber = Math.floor(Math.random() * 2 + 1);
     if (randomNumber === 1) {
       this.playerTurn = this.playerOne;
-    } else {
+      playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
+    } else if (randomNumber === 2) {
       this.playerTurn = this.playerTwo;
+      playerMessage.innerText = `It's ${game.playerTurn.id}'s Turn!`;
     }
   }
 
