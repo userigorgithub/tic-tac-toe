@@ -12,8 +12,8 @@ var resetScoreBtn = document.querySelector(".reset-button");
 var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
-window.addEventListener('load', function() {
-  game.randomizePlayer();
+window.addEventListener('load', function(e) {
+  game.randomizePlayer(e);
 })
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
@@ -87,4 +87,8 @@ function resetScore() {
   game.clearWins();
   showScore();
   game.randomizePlayer();
+}
+
+function playStopMusic() {
+  gameMusic.play();
 }
