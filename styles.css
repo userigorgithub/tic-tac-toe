@@ -19,6 +19,24 @@ img {
   margin-bottom: 5vh;
 }
 
+.hidden {
+  display: none!important;
+}
+
+/* OPENING PAGE RULES */
+
+.opening-page {
+  background-image: url("./assets/main-image.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #FFFFFF;
+  /* opacity: 0.5; */
+}
+
 /* MAIN PAGE RULES */
 
 .main-page {
