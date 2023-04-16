@@ -83,4 +83,5 @@ function resetGame() {
 function resetScore() {
   game.clearWins();
   showScore();
+  game.randomizePlayer();
 }
