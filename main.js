@@ -1,5 +1,6 @@
 // Global Variable(s):
 var game = new Game();
+var gameMusic = new Audio("./assets/solar-tic-tac-toe.mp3");
 
 // Query Selector(s):
 var gameGrid = document.querySelector(".game-grid");
