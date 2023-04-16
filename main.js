@@ -16,6 +16,7 @@ window.addEventListener('load', function() {
 })
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
+musicBtn.addEventListener('click', playStopMusic);
 
 // Function(s) and Event Handler(s):
 function clickBox(event) {
