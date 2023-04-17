@@ -15,7 +15,7 @@ var resetScoreBtn = document.querySelector(".reset-button");
 var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
-
+startBtn.addEventListener('click', startGame);
 window.addEventListener('load', function(e) {
   game.randomizePlayer(e);
 })
