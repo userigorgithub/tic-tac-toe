@@ -104,6 +104,7 @@ function resetScore() {
   game.clearWins();
   showScore();
   game.randomizePlayer();
+  resetGame();
 }
 
 function playStopMusic() {
