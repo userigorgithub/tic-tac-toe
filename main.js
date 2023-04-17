@@ -69,6 +69,14 @@ function showScore() {
   playerTwoScore.innerHTML = `${game.playerTwo.wins}`;
 }
 
+function showElement(element) {
+  element.classList.remove('hidden');
+}
+
+function hideElement(element) {
+  element.classList.add('hidden');
+}
+
 function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
 }
