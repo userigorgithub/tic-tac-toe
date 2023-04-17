@@ -19,6 +19,19 @@ img {
   margin-bottom: 5vh;
 }
 
+h1 {
+  font-size: 40px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #282828;
+  color: white;
+}
+
 .hidden {
   display: none!important;
 }
@@ -30,11 +43,44 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  text-align: center;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+.opening-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60%;
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 10%;
+  background-color: rgba(251, 245, 245, 0.1);
+}
+
+.opening-game-title {
   color: #FFFFFF;
-  /* opacity: 0.5; */
+  margin-top: 0%;
+}
+
+.opening-page-paragraph {
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.play-game-button {
+  height: 40px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-width: 2.5px;
+  margin-top: 5%;
+  font-size: 20px;
 }
 
 /* MAIN PAGE RULES */
