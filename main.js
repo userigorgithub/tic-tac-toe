@@ -3,9 +3,9 @@ var game = new Game();
 var gameMusic = new Audio("./assets/solar-tic-tac-toe.mp3");
 
 // Query Selector(s):
-var openingPage = document.querySelector(."opening-page");
-var mainPage = document.querySelector(."main-page");
-var startBtn = document.querySelector(."start-game-button");
+var openingPage = document.querySelector(".opening-page");
+var mainPage = document.querySelector(".main-page");
+var startBtn = document.querySelector(".start-game-button");
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
@@ -16,14 +16,18 @@ var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
 startBtn.addEventListener('click', startGame);
-window.addEventListener('load', function(e) {
-  game.randomizePlayer(e);
-})
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
 musicBtn.addEventListener('click', playStopMusic);
 
 // Function(s) and Event Handler(s):
+function startGame() {
+  hideElement(openingPage);
+  showElement(mainPage);
+  game.randomizePlayer();
+}
+
+
 function clickBox(event) {
   var box = event.target;
   var boxId = event.target.id;
