@@ -1,5 +1,6 @@
 // Global Variable(s):
 var game = new Game();
+var gameMusic = new Audio("./assets/solar-tic-tac-toe.mp3");
 
 // Query Selector(s):
 var gameGrid = document.querySelector(".game-grid");
@@ -8,13 +9,15 @@ var playerMessage = document.querySelector(".player-message");
 var playerOneScore = document.querySelector(".number-of-wins-one");
 var playerTwoScore = document.querySelector(".number-of-wins-two");
 var resetScoreBtn = document.querySelector(".reset-button");
+var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
-window.addEventListener('load', function() {
-  game.randomizePlayer();
+window.addEventListener('load', function(e) {
+  game.randomizePlayer(e);
 })
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
+musicBtn.addEventListener('click', playStopMusic);
 
 // Function(s) and Event Handler(s):
 function clickBox(event) {
@@ -84,4 +87,8 @@ function resetScore() {
   game.clearWins();
   showScore();
   game.randomizePlayer();
+}
+
+function playStopMusic() {
+  gameMusic.play();
 }
