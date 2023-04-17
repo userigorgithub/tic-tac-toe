@@ -5,6 +5,7 @@ var gameMusic = new Audio("./assets/solar-tic-tac-toe.mp3");
 // Query Selector(s):
 var openingPage = document.querySelector(."opening-page");
 var mainPage = document.querySelector(."main-page");
+var startBtn = document.querySelector(."start-game-button");
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
@@ -14,6 +15,7 @@ var resetScoreBtn = document.querySelector(".reset-button");
 var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
+
 window.addEventListener('load', function(e) {
   game.randomizePlayer(e);
 })
