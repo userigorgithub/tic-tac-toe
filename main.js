@@ -1,8 +1,12 @@
 // Global Variable(s):
 var game = new Game();
 var gameMusic = new Audio("./assets/solar-tic-tac-toe.mp3");
+var musicBtnStatus = false;
 
 // Query Selector(s):
+var openingPage = document.querySelector(".opening-page");
+var mainPage = document.querySelector(".main-page");
+var startBtn = document.querySelector(".start-game-button");
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
@@ -12,14 +16,19 @@ var resetScoreBtn = document.querySelector(".reset-button");
 var musicBtn = document.querySelector(".music-button");
 
 // Event Listener(s):
-window.addEventListener('load', function(e) {
-  game.randomizePlayer(e);
-})
+startBtn.addEventListener('click', startGame);
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
 musicBtn.addEventListener('click', playStopMusic);
 
 // Function(s) and Event Handler(s):
+function startGame() {
+  hideElement(openingPage);
+  showElement(mainPage);
+  game.randomizePlayer();
+  playStopMusic();
+}
+
 function clickBox(event) {
   var box = event.target;
   var boxId = event.target.id;
@@ -65,6 +74,14 @@ function showScore() {
   playerTwoScore.innerHTML = `${game.playerTwo.wins}`;
 }
 
+function showElement(element) {
+  element.classList.remove('hidden');
+}
+
+function hideElement(element) {
+  element.classList.add('hidden');
+}
+
 function disableGameGrid() {
   gameGrid.removeEventListener('click', clickBox);
 }
@@ -87,8 +104,18 @@ function resetScore() {
   game.clearWins();
   showScore();
   game.randomizePlayer();
+  resetGame();
 }
 
 function playStopMusic() {
-  gameMusic.play();
+  if (!musicBtnStatus) {
+    musicBtn.innerText = "Music ON";
+    musicBtnStatus = true;
+    gameMusic.play();
+    gameMusic.loop = true;
+  } else {
+    musicBtn.innerText = "Music OFF";
+    musicBtnStatus = false;
+    gameMusic.pause();
+  }
 }
