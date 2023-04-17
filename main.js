@@ -3,6 +3,8 @@ var game = new Game();
 var gameMusic = new Audio("./assets/solar-tic-tac-toe.mp3");
 
 // Query Selector(s):
+var openingPage = document.querySelector(."opening-page");
+var mainPage = document.querySelector(."main-page");
 var gameGrid = document.querySelector(".game-grid");
 var boxArea = document.querySelectorAll(".box-space");
 var playerMessage = document.querySelector(".player-message");
