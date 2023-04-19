@@ -32,6 +32,10 @@ button:hover {
   color: white;
 }
 
+.solar-title {
+  /* font-size: 60px; */
+}
+
 .hidden {
   display: none!important;
 }
@@ -98,24 +102,35 @@ button:hover {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  background-position: center;
   width: 26vw;
 }
 
 .player-one-area {
   background-image: url("./assets/earth.jpeg");
-  background-position: center;
 }
 
 .player-two-area {
   background-image: url("./assets/mars.jpeg");
-  background-position: center;
+}
+
+.player-one-wrapper,
+.player-two-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80%;
+  width: 90%;
+  background-color: rgba(251, 245, 245, 0.3);
 }
 
 .player-one,
 .player-two {
-  margin-top: 140px;
+  margin-top: 20%;
   font-size: 40px;
 }
 
@@ -126,7 +141,7 @@ button:hover {
 
 .number-of-wins-one,
 .number-of-wins-two {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .game-area {
