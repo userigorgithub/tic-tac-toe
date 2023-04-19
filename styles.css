@@ -1,5 +1,4 @@
 /* GLOBAL RULES */
-
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -15,7 +14,6 @@ body {
 img {
   height: 80px;
   width: 80px;
-  /* margin-top: 3vh; */
   margin-bottom: 5vh;
 }
 
@@ -33,7 +31,7 @@ button:hover {
 }
 
 .solar-title {
-  /* font-size: 60px; */
+  /* TBD */
 }
 
 .hidden {
@@ -41,7 +39,6 @@ button:hover {
 }
 
 /* OPENING PAGE RULES */
-
 .opening-page {
   background-image: url("./assets/main-image.jpeg");
   background-size: cover;
@@ -72,7 +69,6 @@ button:hover {
 }
 
 .opening-page-paragraph {
-  /* color: #FFFFFF; */
   font-size: 20px;
 }
 
@@ -89,7 +85,6 @@ button:hover {
 }
 
 /* MAIN PAGE RULES */
-
 .main-page {
   display: flex;
   height: 100vh;
@@ -130,7 +125,6 @@ button:hover {
 
 .player-one,
 .player-two {
-  /* margin-top: 10%; */
   font-size: 40px;
 }
 
