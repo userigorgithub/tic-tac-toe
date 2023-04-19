@@ -15,7 +15,7 @@ body {
 img {
   height: 80px;
   width: 80px;
-  margin-top: 5vh;
+  /* margin-top: 3vh; */
   margin-bottom: 5vh;
 }
 
@@ -78,7 +78,7 @@ button:hover {
 
 .start-game-button {
   height: 40px;
-  width: 120px;
+  width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,4 +183,17 @@ button:hover {
   width: 15vw;
   border-style: solid;
   cursor: pointer;
+}
+
+.reset-button,
+.music-button {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-width: 2.5px;
+  margin-top: 5%;
+  font-size: 20px;
 }
