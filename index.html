@@ -9,7 +9,7 @@
   <body>
     <section class="opening-page">
       <div class="opening-page-wrapper">
-        <h1 class="opening-game-title">SOLAR TIC TAC TOE</h1>
+        <h1 class="opening-game-title"><span class="solar-title">SOLAR</span> TIC TAC TOE</h1>
         <p class="opening-page-paragraph">Welcome to a game for planet domination!</p>
         <p class="opening-page-paragraph">Begin to play at your own risk.</p>
         <button class="start-game-button">Start</button>
@@ -17,13 +17,15 @@
     </section>
     <section class="main-page hidden">
       <article class="player-one-area">
-        <h1 class="player-one">Player 1</h1>
-        <img class="token" src="./assets/planetone-galaxy-svgrepo-com.svg" alt="planet" />
-        <h2 class="number-of-wins">Number of wins:</h2>
-        <h3 class="number-of-wins-one">0</h3>
+        <div class="player-one-wrapper">
+          <h1 class="player-one">Player 1</h1>
+          <img class="token" src="./assets/planetone-galaxy-svgrepo-com.svg" alt="planet" />
+          <h2 class="number-of-wins">Number of wins:</h2>
+          <h3 class="number-of-wins-one">0</h3>
+        </div>
       </article>
       <article class="game-area">
-        <h1 class="game-title">SOLAR TIC TAC TOE</h1>
+        <h1 class="game-title"><span class="solar-title">SOLAR</span> TIC TAC TOE</h1>
         <h2 class="player-message">It's Player 1's Turn!</h2>
         <div class="game-grid">
           <div class="box-space" id="0"></div>
@@ -35,15 +37,19 @@
           <div class="box-space" id="6"></div>
           <div class="box-space" id="7"></div>
           <div class="box-space" id="8"></div>
+        </div>
+        <div class="main-page-buttons">
           <button class="reset-button">Reset Score</button>
           <button class="music-button">Music ON</button>
         </div>
       </article>
       <article class="player-two-area">
-        <h1 class="player-two">Player 2</h1>
-        <img class="token" src="./assets/planettwo-galaxy-svgrepo-com.svg" alt="planet" />
-        <h2 class="number-of-wins">Number of wins:</h2>
-        <h3 class="number-of-wins-two">0</h3>
+        <div class="player-two-wrapper">
+          <h1 class="player-two">Player 2</h1>
+          <img class="token" src="./assets/planettwo-galaxy-svgrepo-com.svg" alt="planet" />
+          <h2 class="number-of-wins">Number of wins:</h2>
+          <h3 class="number-of-wins-two">0</h3>
+        </div>
       </article>
     </section>
     <script type="text/javascript" src="player.js"></script>

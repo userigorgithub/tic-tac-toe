@@ -1,5 +1,4 @@
 /* GLOBAL RULES */
-
 * {
   font-family: 'Quicksand', sans-serif;
 }
@@ -32,16 +31,20 @@ button:hover {
   color: white;
 }
 
+.solar-title {
+  /* TBD */
+}
+
 .hidden {
   display: none!important;
 }
 
 /* OPENING PAGE RULES */
-
 .opening-page {
   background-image: url("./assets/main-image.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,13 +70,12 @@ button:hover {
 }
 
 .opening-page-paragraph {
-  /* color: #FFFFFF; */
   font-size: 20px;
 }
 
 .start-game-button {
   height: 40px;
-  width: 120px;
+  width: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,7 +86,6 @@ button:hover {
 }
 
 /* MAIN PAGE RULES */
-
 .main-page {
   display: flex;
   height: 100vh;
@@ -97,7 +98,9 @@ button:hover {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  background-position: center;
   width: 26vw;
 }
 
@@ -109,9 +112,20 @@ button:hover {
   background-image: url("./assets/mars.jpeg");
 }
 
+.player-one-wrapper,
+.player-two-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80%;
+  width: 90%;
+  background-color: rgba(251, 245, 245, 0.3);
+}
+
 .player-one,
 .player-two {
-  margin-top: 140px;
   font-size: 40px;
 }
 
@@ -122,16 +136,18 @@ button:hover {
 
 .number-of-wins-one,
 .number-of-wins-two {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .game-area {
   background-image: url("./assets/main-image.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   width: 48vw;
 }
 
@@ -141,6 +157,7 @@ button:hover {
 
 .player-message {
   font-size: 30px;
+  margin-top: -5%;
 }
 
 .game-grid {
@@ -161,4 +178,17 @@ button:hover {
   width: 15vw;
   border-style: solid;
   cursor: pointer;
+}
+
+.reset-button,
+.music-button {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border-width: 2.5px;
+  margin-top: 5%;
+  font-size: 20px;
 }
