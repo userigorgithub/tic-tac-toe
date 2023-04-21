@@ -134,6 +134,22 @@ button:hover {
   font-size: 40px;
 }
 
+.player-one {
+  background: linear-gradient(to right, rgba(247,247,247,1), rgba(0,145,255,1));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.player-two {
+  background: linear-gradient(to left, rgba(247,247,247,1), rgba(255,0,25,1));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 .number-of-wins {
   margin-top: 0px;
   font-size: 30px;
