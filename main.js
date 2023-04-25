@@ -38,7 +38,9 @@ function openModal () {
   showElement(modal);
 }
 
-
+function closeModal() {
+  hideElement(modal);
+}
 
 function clickBox(event) {
   var box = event.target;
