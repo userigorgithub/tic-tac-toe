@@ -26,6 +26,7 @@ gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
 musicBtn.addEventListener('click', playStopMusic);
 
+
 // Function(s) and Event Handler(s):
 function startGame() {
   hideElement(openingPage);
