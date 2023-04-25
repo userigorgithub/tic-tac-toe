@@ -99,12 +99,13 @@ button:hover {
 
 /* MODAL RULES */
 .modal {
+  background: url("./assets/modal.jpg");
+  opacity: 0.95;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: rgb(0, 0, 0, 0.9);
   color: #FFFFFF;
   height: 70%;
   width: 60%;
