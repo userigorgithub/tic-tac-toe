@@ -66,7 +66,7 @@ button:hover {
   width: 50%;
   border-radius: 10px;
   margin-bottom: 10%;
-  background-color: rgba(251, 245, 245, 0.3);
+  background-color: rgba(255, 245, 245, 0.3);
 }
 
 .opening-game-title {
@@ -87,6 +87,42 @@ button:hover {
   border-radius: 5px;
   border-width: 2.5px;
   margin-top: 5%;
+  font-size: 20px;
+}
+
+.game-rules-button {
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
+/* MODAL RULES */
+.modal {
+  background: url("./assets/modal.jpg");
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #FFFFFF;
+  height: 70%;
+  width: 60%;
+  top: 10%;
+  border-radius: 10px;
+}
+
+.close-modal-button {
+  height: 40px;
+  width: 40px;
+  margin-left: 90%;
+  border-radius: 5px;
+  border-width: 2.5px;
+  font-size: 20px;
+}
+
+li {
   font-size: 20px;
 }
 
