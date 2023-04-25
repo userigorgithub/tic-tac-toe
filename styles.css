@@ -90,6 +90,13 @@ button:hover {
   font-size: 20px;
 }
 
+.game-rules-button {
+  height: 30px;
+  width: 50px;
+  border-radius: 5px;
+  margin-top: 2%;
+}
+
 /* MODAL RULES */
 .modal {
   display: flex;
