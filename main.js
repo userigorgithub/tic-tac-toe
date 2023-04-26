@@ -50,12 +50,10 @@ function clickBox(event) {
     event.target.innerHTML =
     `<img class="token" src=${game.playerTurn.token} alt="planet" />`;
     game.changeBoxStatus(boxId);
-    game.totalTurns++;
     game.changeTurn();
     changeTurnMessage();
     game.checkWin();
     game.checkDraw();
-    return;
   }
 }
 
@@ -69,12 +67,14 @@ function changeTurnMessage() {
 
 function earthWinMessage() {
   if (game.playerOne) {
+    game.playerOne.wins += 1;
     playerMessage.innerText = `${game.playerOne.id} Wins!`;
   }
 }
 
 function marsWinMessage() {
   if (game.playerTwo) {
+    game.playerTwo.wins += 1;
     playerMessage.innerText = `${game.playerTwo.id} Wins!`;
   }
 }

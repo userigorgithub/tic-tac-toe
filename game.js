@@ -43,19 +43,15 @@ class Game {
     var earth = this.winPatterns(`${this.playerOne.token}`);
     var mars = this.winPatterns(`${this.playerTwo.token}`);
     if (earth) {
-      this.playerOne.wins++;
       earthWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
-      return true;
     } else if (mars) {
-      this.playerTwo.wins++;
       marsWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
-      return true;
     }
   }
 
@@ -65,7 +61,6 @@ class Game {
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
-      return true;
     }
   }
 
