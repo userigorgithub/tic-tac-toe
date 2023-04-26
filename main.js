@@ -50,7 +50,7 @@ function clickBox(event) {
     event.target.innerHTML =
     `<img class="token" src=${game.playerTurn.token} alt="planet" />`;
     game.changeBoxStatus(boxId);
-    game.totalTurns++;
+    // game.totalTurns++;
     game.changeTurn();
     changeTurnMessage();
     game.checkWin();
