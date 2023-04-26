@@ -43,14 +43,14 @@ class Game {
     var earth = this.winPatterns(`${this.playerOne.token}`);
     var mars = this.winPatterns(`${this.playerTwo.token}`);
     if (earth) {
-      this.playerOne.wins++;
+      // this.playerOne.wins+=1;
       earthWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
       return true;
     } else if (mars) {
-      this.playerTwo.wins++;
+      // this.playerTwo.wins+=1;
       marsWinMessage();
       showScore();
       disableGameGrid();

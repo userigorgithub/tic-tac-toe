@@ -6,7 +6,9 @@ class Player {
   }
 
   addWins() {
-    this.wins++;
+    if (this.totalTurns === 9) {
+      this.wins -= 1;
+    }
     return this.wins;
   }
 }

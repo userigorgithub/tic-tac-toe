@@ -69,12 +69,14 @@ function changeTurnMessage() {
 
 function earthWinMessage() {
   if (game.playerOne) {
+    console.log(game.playerOne.wins += 1)
     playerMessage.innerText = `${game.playerOne.id} Wins!`;
   }
 }
 
 function marsWinMessage() {
   if (game.playerTwo) {
+    console.log(game.playerTwo.wins += 1)
     playerMessage.innerText = `${game.playerTwo.id} Wins!`;
   }
 }
