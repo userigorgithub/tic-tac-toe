@@ -55,7 +55,7 @@ function clickBox(event) {
     changeTurnMessage();
     game.checkWin();
     game.checkDraw();
-    return;
+    // return;
   }
 }
 

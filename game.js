@@ -48,14 +48,14 @@ class Game {
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
-      return true;
+      // return true;
     } else if (mars) {
       // this.playerTwo.wins+=1;
       marsWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
-      return true;
+      // return true;
     }
   }
 
@@ -65,7 +65,7 @@ class Game {
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
-      return true;
+      // return true;
     }
   }
 
