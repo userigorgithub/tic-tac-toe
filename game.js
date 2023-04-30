@@ -47,11 +47,13 @@ class Game {
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
+      return true;
     } else if (mars) {
       marsWinMessage();
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
+      return true;
     }
   }
 
@@ -61,6 +63,7 @@ class Game {
       showScore();
       disableGameGrid();
       setTimeout(resetGame, 2000);
+      return true;
     }
   }
 
