@@ -10,7 +10,8 @@ Experience an epic game of tic tac toe for planet domination!
 - []()
 
 ## Contributor(s)
-Front-End Developer: [Igor Decess](https://github.com/userigorgithub)
+- Software Engineer: [Igor Decess](https://github.com/userigorgithub)
+- Music: Kevin McLeod (title: "Experimental Test Subject")
 
 ## Technologies Used
 - Github open source version control software: [Website](https://github.com/)
