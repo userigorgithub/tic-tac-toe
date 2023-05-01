@@ -3,7 +3,7 @@ Experience an epic game of tic tac toe for planet domination!
 
 ## Table of Contents
 - [Contributor(s)](#contributor(s))
-- []()
+- [Technologies](#technologies)
 - []()
 - []()
 - []()
@@ -13,11 +13,17 @@ Experience an epic game of tic tac toe for planet domination!
 - Software Engineer: [Igor Decess](https://github.com/userigorgithub)
 - Music: Kevin McLeod (title: "Experimental Test Subject")
 
-## Technologies Used
-- Github open source version control software: [Website](https://github.com/)
-- HTML, CSS, JavaScript
-- Atom
+## Technologies
+- HTML5
+  - Semantic tags
+- CSS3
+  - BEM naming
+  - Grid and Flexbox
+- JavaScript
+  - Classes
+  - DOM manipulation
 - Chrome Dev Tools
+- Atom
 
 ## Overview
 Tic Tac Toe was the project to gain better understanding in writing HTML, CSS, and JavaScript code and their interaction between each other. It utilizes classes and data model/DOM interaction. Access it by clicking [HERE!](https://userigorgithub.github.io/tic-tac-toe/)
