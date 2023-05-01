@@ -1,7 +1,16 @@
 # Solar Tic Tac Toe
+Experience an epic game of tic tac toe for planet domination!
+
+## Table of Contents
+- [Contributor(s)](#contributor(s))
+- []()
+- []()
+- []()
+- []()
+- []()
 
 ## Contributor(s)
-[Igor Decess](https://github.com/userigorgithub)
+Front-End Developer: [Igor Decess](https://github.com/userigorgithub)
 
 ## Technologies Used
 - Github open source version control software: [Website](https://github.com/)
