@@ -24,6 +24,7 @@ var musicBtn = document.querySelector(".music-button");
 startBtn.addEventListener('click', startGame);
 gameRulesBtn.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
 musicBtn.addEventListener('click', playStopMusic);
