@@ -7,6 +7,8 @@ var musicBtnStatus = false;
 var openingPage = document.querySelector(".opening-page");
 var mainPage = document.querySelector(".main-page");
 var modal = document.querySelector(".modal");
+var overlay = document.querySelector(".overlay");
+var openingPageWrap = document.querySelector(".opening-page-wrapper");
 var gameRulesBtn = document.querySelector(".game-rules-button");
 var closeModalBtn = document.querySelector(".close-modal-button");
 var startBtn = document.querySelector(".start-game-button");
@@ -22,6 +24,7 @@ var musicBtn = document.querySelector(".music-button");
 startBtn.addEventListener('click', startGame);
 gameRulesBtn.addEventListener('click', openModal);
 closeModalBtn.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
 gameGrid.addEventListener('click', clickBox);
 resetScoreBtn.addEventListener('click', resetScore);
 musicBtn.addEventListener('click', playStopMusic);
@@ -36,11 +39,15 @@ function startGame() {
 }
 
 function openModal () {
+  hideElement(openingPageWrap);
   showElement(modal);
+  showElement(overlay);
 }
 
 function closeModal() {
   hideElement(modal);
+  hideElement(overlay);
+  showElement(openingPageWrap);
 }
 
 function clickBox(event) {
