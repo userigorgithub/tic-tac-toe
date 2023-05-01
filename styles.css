@@ -40,6 +40,11 @@ button:hover {
   0px -20px 40px #C33;
 }
 
+.hr {
+width: 75%;
+margin-top: -3%;
+}
+
 .hidden {
   display: none!important;
 }
