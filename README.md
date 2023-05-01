@@ -3,8 +3,9 @@ Experience an epic game of tic tac toe for planet domination!
 
 ## Table of Contents
 - [Contributor(s)](#contributor(s))
+- [Introduction](#introduction)
 - [Technologies](#technologies)
-- []()
+- [Deployed Link](#deployed-link)
 - []()
 - []()
 - []()
@@ -12,6 +13,9 @@ Experience an epic game of tic tac toe for planet domination!
 ## Contributor(s)
 - Software Engineer: [Igor Decess](https://github.com/userigorgithub)
 - Music: Kevin McLeod (title: "Experimental Test Subject")
+
+## Introduction
+Solar Tic Tac Toe was the project to gain better understanding in writing HTML5, CSS3, and JavaScript code and their interaction between each other. It utilizes classes and data model/DOM manipulation.
 
 ## Technologies
 - HTML5
@@ -25,8 +29,9 @@ Experience an epic game of tic tac toe for planet domination!
 - Chrome Dev Tools
 - Atom
 
-## Overview
-Tic Tac Toe was the project to gain better understanding in writing HTML, CSS, and JavaScript code and their interaction between each other. It utilizes classes and data model/DOM interaction. Access it by clicking [HERE!](https://userigorgithub.github.io/tic-tac-toe/)
+## Deployed Link
+Access application by clicking [HERE!](https://userigorgithub.github.io/tic-tac-toe/)
+
 
 ## Feature(s)
 - Play classic themed Tic Tac Toe!
