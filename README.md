@@ -6,8 +6,8 @@ Experience an epic game of tic tac toe for planet domination!
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Deployed Link](#deployed-link)
-- []()
-- []()
+- [Features](#features)
+- [Installation Instructions](#installation-instructions)
 - []()
 
 ## Contributor(s)
@@ -32,12 +32,15 @@ Solar Tic Tac Toe was the project to gain better understanding in writing HTML5,
 ## Deployed Link
 Access application by clicking [HERE!](https://userigorgithub.github.io/tic-tac-toe/)
 
-
-## Feature(s)
-- Play classic themed Tic Tac Toe!
+## Features
+- Player randomization upon game start
+- Background soundtrack to stimulate emersion
+- Render and update DOM to support correct data model
+- Class to class interaction to maintain and update data model
+- Reset score for new competition (randomization of a new player included)
 
 ## Installation Instructions
-1. Clone this repository into your terminal
+1. Clone this [repository](https://github.com/userigorgithub/tic-tac-toe) into your terminal
 2. `cd` into the directory
 3. Run `open index.html` to see it in the browser
 
