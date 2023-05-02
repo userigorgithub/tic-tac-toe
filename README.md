@@ -2,7 +2,7 @@
 Experience an epic game of tic tac toe for planet domination!
 
 ## Table of Contents
-- [Contributor(s)](#contributor(s))
+- [Contributors](#contributors)
 - [Introduction](#introduction)
 - [Technologies](#technologies)
 - [Deployed Link](#deployed-link)
