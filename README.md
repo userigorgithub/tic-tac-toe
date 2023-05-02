@@ -9,8 +9,8 @@ Experience an epic game of tic tac toe for planet domination!
 - [Features](#features)
 - [Installation Instructions](#installation-instructions)
 - [Project Demo](#project-demo)
-- []()
-- []()
+- [Possible Extensions](#possible-extensions)
+- [Project Specs](#project-specs)
 
 ## Contributor(s)
 - Software Engineer: [Igor Decess](https://github.com/userigorgithub)
@@ -66,7 +66,10 @@ Note: But be careful not to allow other player succeed first!
 9. Clicking "Reset Score" button resets all scores to 0 so new match can be played.
 10. Clicking "Music ON" button turns music OFF. It can be turned ON again by clicking now "Music OFF" button.
 
-
+## Possible Extensions
+- Choice to play against computer
+- Have all planets of the solar system and ability to pick which planet to play
+- Use media queries for responsive design
 
 ## Project Specs
-Project specs and rubric can be found [HERE!](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo.html)
+Project specs and rubric can be found [here](https://frontend.turing.edu/projects/module-1/tic-tac-toe-solo.html), provided by [Turing School of Software and Design](https://turing.edu/).
