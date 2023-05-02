@@ -52,8 +52,7 @@ Access application by clicking [HERE!](https://userigorgithub.github.io/tic-tac-
 3. Click "Start" button to start the game.
 Note: Decide on who is player 1 and who is player 2 before clicking "Start" button.
 
-
-
+![OpeningPageSolarTicTacToe](https://user-images.githubusercontent.com/87003746/235581145-8cbae827-7e62-4959-8358-70a8f443ff03.gif)
 
 4. This is the main page of the application.
 5. Click on one of nine boxes to start playing as player 1 or 2, then click on one of remaining boxes to start playing as another player, and so on alternating turns.
@@ -62,8 +61,7 @@ Note: But be careful not to allow other player succeed first!
 7. Win adds to the player's wins and game restarts automatically.
 8. If no player succeeds in getting three tokens horizontally, vertically, or diagonally, game is a draw, and no win is added to either of players (game restarts automatically).
 
-
-
+![MainPageSolarTicTacToe](https://user-images.githubusercontent.com/87003746/235581604-a4c62e31-8dbb-409d-9ab4-944d6a0db4b9.gif)
 
 9. Clicking "Reset Score" button resets all scores to 0 so new match can be played.
 10. Clicking "Music ON" button turns music OFF. It can be turned ON again by clicking now "Music OFF" button.
